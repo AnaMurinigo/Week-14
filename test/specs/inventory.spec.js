@@ -9,18 +9,17 @@ describe('Adding to cart page testing', () => {
     })
 
     it('Adding succesfull', async () => {
-        await expect(InventoryPage.addBtn).toHaveText('ADD TO CART');
-        await InventoryPage.addBtnList[0].click();
-        await InventoryPage.addBtnList[2].click();
+        await expect(InventoryPage.addBtn1).toHaveText('ADD TO CART');
+        await InventoryPage.addToCart(1);
+        await InventoryPage.addToCart(2);
         await expect(InventoryPage.cartItems).toHaveText('2');
-        await InventoryPage.addBtnList[2].click();
+        await InventoryPage.removeFromCart(2);
         await expect(InventoryPage.cartItems).toHaveText('1');
-        await expect(InventoryPage.removeBtn).toHaveText('REMOVE');
     })
-    it('Removing succesfull', async () => {
-        await expect(InventoryPage.removeBtn).toHaveText('REMOVE');
-        await InventoryPage.removeFromCart();
+    it('Removing all succesfull', async () => {
+        await expect(InventoryPage.removeBtn1).toHaveText('REMOVE');
+        await InventoryPage.removeFromCart(1);
         await expect(InventoryPage.cartItems).not.toBeExisting();
-        await expect(InventoryPage.addBtn).toHaveText('ADD TO CART');
+        await expect(InventoryPage.addBtn1).toHaveText('ADD TO CART');
     })
 })

@@ -55,4 +55,11 @@ describe('Lock out user input test', () => {
         await LoginPage.login('locked_out_user', 'secret_sauce');
         await expect(LoginPage.errorContainer).toHaveText('Epic sadface: Sorry, this user has been locked out.');
     })
+    it('Login success', async () => {
+        await LoginPage.login('performance_glitch_user','secret_sauce');
+    })
+    it('should detect when element is visible', async () => {
+        const elem = await $('#item_4_img_link > img')
+        await elem.waitForDisplayed({ timeout: 5000 });
+    })
 })
