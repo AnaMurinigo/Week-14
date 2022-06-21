@@ -3,7 +3,7 @@ class LoginPage{
     get inputUsername() { return $('#user-name')}
     get inputPassword() {return $('#password')}
     get btnLogin() {return $('#login-button')}
-    get errorContainer() { return $('.error-message-container.error') }
+    get errorContainer() { return $('.error-message-container.error')}
     get title() {return $('.title')}
 
     //Setters
