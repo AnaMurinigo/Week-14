@@ -14,6 +14,9 @@ class InventoryPage{
     get removeBtn6() { return $('//*[@id="remove-test.allthethings()-t-shirt-(red)"]')};
     get cartItems() {return $('.shopping_cart_badge')};
     get cartBtn() {return $('.shopping_cart_link')};
+    get imgList() {return $$('.inventory_item_img')};
+    get nameList() {return $$('.inventory_item_name')};
+    get priceList() {return $$('.inventory_item_price')};
 
     //Methods
     async addToCart(n) {
@@ -35,6 +38,8 @@ class InventoryPage{
                 break;
             case 6:
                 await this.addBtn6.click();
+                break;
+            default:
                 break;
         }
     }
