@@ -1,11 +1,12 @@
 class LoginPage{
     //Getters
-    get inputUsername() { return $('#user-name')}
-    get inputPassword() {return $('#password')}
-    get btnLogin() {return $('#login-button')}
-    get errorContainer() { return $('.error-message-container.error')}
-    get title() {return $('.title')}
-
+    get inputUsername() { return $('#user-name')};
+    get inputPassword() {return $('#password')};
+    get btnLogin() {return $('#login-button')};
+    get errorContainer() { return $('.error-message-container.error')};
+    get title() {return $('.title')};
+    get botImg () {return $('.bot_column')};
+    get logoImg () {return $('.login_logo')};
     //Setters
     async setUsername(username){
         await this.inputUsername.setValue(username);
