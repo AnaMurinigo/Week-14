@@ -45,7 +45,7 @@ describe('Adding to cart standard user page testing', () => {
         await expect(InventoryPage.addBtn6).toHaveText('ADD TO CART');
     })
 })
-describe('Adding to cart standard user page testing', () => {
+describe('Adding to cart problem user page testing', () => {
     beforeAll('open browser', () => {
         browser.url('https://www.saucedemo.com/');
         LoginPage.login('problem_user','secret_sauce');

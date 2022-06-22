@@ -23,9 +23,10 @@ exports.config = {
     specs: [
         // './test/specs/**/*.js'
         // './test/specs/**/cart.spec.js'
-        './test/specs/**/inventory.spec.js'
+        //'./test/specs/**/inventory.spec.js'
         //'./test/specs/**/checkout.spec.js'
        // './test/specs/**/login.spec.js'
+        './test/specs/**/standarde2e.spec.js'
 
     ],
     // Patterns to exclude.
